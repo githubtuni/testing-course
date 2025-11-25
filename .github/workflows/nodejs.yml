@@ -26,3 +26,6 @@ jobs:
 
     - name: Run tests
       run: npm test
+    
+    - name: Run coverage and send to Coveralls
+      run: npm run coveralls
