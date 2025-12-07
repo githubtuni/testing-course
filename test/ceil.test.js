@@ -54,12 +54,4 @@ describe('ceil()', () => {
     it("should handle precision larger than number of decimals in a negative number", () => {
         expect(ceil(-2.1, 10)).to.equal(-2.1);
     });
-
-
-
-
-
-
-   
-
-})
+});

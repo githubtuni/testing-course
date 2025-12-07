@@ -91,4 +91,4 @@ describe('reduce()', () => {
         const result = reduce("abc", (acc, ch) => acc + ch, "");
         expect(result).to.equal("abc");
     });
-})
+});
