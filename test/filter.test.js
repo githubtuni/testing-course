@@ -54,11 +54,4 @@ describe('filter()', () => {
         const result = filter(users, (val, idx) => idx % 2 === 0)
         expect(result).to.deep.equal(['a', 'c'])
     })
-
-    it('should filter based on index', () => {
-        const users = ['a', 'b', 'c', 'd']        
-
-        const result = filter(users, (val, idx) => idx % 2 === 0)
-        expect(result).to.deep.equal(['a', 'c'])
-    })
 });
