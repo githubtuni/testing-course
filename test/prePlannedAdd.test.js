@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import add from '../src/add.js';
 
-describe("add()", () => {
+describe("pre-planned add()", () => {
 
   it("should add two positive numbers", () => {
     expect(add(5, 10)).to.equal(15);

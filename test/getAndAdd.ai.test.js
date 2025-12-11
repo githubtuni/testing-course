@@ -3,7 +3,7 @@ import add from '../src/add.js'
 import get from '../src/get.js'
 
 
-describe('add()', () => {
+describe('add() by AI', () => {
 
   it('adds two numbers correctly', () => {
     expect(add(6, 4)).to.equal(10)
@@ -61,7 +61,7 @@ describe('add()', () => {
 })
 
 
-describe('get()', () => {
+describe('get() by AI', () => {
   const obj = {
     a: [
       {

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import get from '../src/get.js';
 
-describe ('get()', () => {
+describe ('pre-planned get()', () => {
     const object1 = { 'x': [{ 'y': { 'z': 15 } }] }
     const object2 = { 'x': 12}
     const object3 = { 'x': undefined }
