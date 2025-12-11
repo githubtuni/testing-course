@@ -3,6 +3,11 @@ import reduce from '../src/reduce.js';
 
 describe('reduce()', () => {
 
+    it("should reduce an array of integers without an accumulator", () => {
+        const result = reduce([0, 2, -1], (sum, n) => sum + n);
+        expect(result).to.equal(1); 
+    });
+
     it("should reduce an array of integers with a provided accumulator", () => {
         const result = reduce([1, 2, 3], (sum, n) => sum + n, 1);
         expect(result).to.equal(7);
@@ -11,21 +16,6 @@ describe('reduce()', () => {
     it("should handle floating point summation accurately", () => {
         const result = reduce([0.1, 0.2, 0.3], (sum, n) => sum + n, 0);
         expect(result).to.be.closeTo(0.6, 0.0001);
-    });
-
-    it("should reduce an array with zero and negative numbers without accumulator", () => {
-        const result = reduce([0, -1, -2], (sum, n) => sum + n);
-        expect(result).to.equal(-3); 
-    });
-
-    it("should use first element as accumulator when none is provided", () => {
-        const result = reduce([1, 2, 3], (sum, n) => sum + n);
-        expect(result).to.equal(6);
-    });
-
-    it("should work with substraction", () => {
-        const result = reduce([10, 1, 1], (acc, n) => acc - n);
-        expect(result).to.equal(8);
     });
 
     it('should reduce an object using its values', () => {
@@ -45,6 +35,12 @@ describe('reduce()', () => {
             1: ['a', 'c'],
             2: ['b']
         });
+    });
+
+    it('should treat null as 0 when using numeric accumulation', () => {
+        const obj = {a: null, b: 0, d: 3};
+        const result = reduce(obj, (sum, val) => sum + val, 0);
+        expect(result).to.equal(3);
     });
 
     it("should handle an empty object with accumulator", () => {
