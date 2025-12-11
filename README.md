@@ -4,5 +4,6 @@ It contains the library functions to be tested, as well as required .internal fu
 
 Testing directory contains the tests themselves.
 
-Coveralls coverage percentage
+Coveralls coverage percentage:
+
 [![Coverage Status](https://coveralls.io/repos/github/githubtuni/testing-course/badge.svg?branch=main)](https://coveralls.io/github/githubtuni/testing-course?branch=main)
